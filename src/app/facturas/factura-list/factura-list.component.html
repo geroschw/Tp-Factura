@@ -1,0 +1,9 @@
+<h3>Listado de Facturas</h3>
+<ul>
+    <li *ngFor="let factura of _FactRepoService.listadoFacturas">
+        {{factura.id}} - {{factura.numero}}-${{factura.total}}
+        <button (click)="borrarFactura(factura.id)">Borrar</button>
+        <button (click)="obtenerFactura(factura.id)"  routerLink="/facturas/{{factura.id}}/{{factura.clienteId}}">Mostrar</button>
+    </li>
+</ul>
+<button routerLink="/facturas/nuevo">Nuevo</button>

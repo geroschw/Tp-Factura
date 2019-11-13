@@ -1,0 +1,8 @@
+<h3>Listado de Items</h3>
+<ul>
+    <li (click)="obtenerItem(item.id)" *ngFor="let item of _ItmRepoService.listadoItems">
+        {{item.id}} - {{item.descripcion}}
+        <button (click)="borrarItem(item.id)">Borrar</button>
+    </li>
+</ul>
+<button routerLink="/items/nuevo">Nuevo</button>

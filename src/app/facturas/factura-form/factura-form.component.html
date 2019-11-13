@@ -1,0 +1,108 @@
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+  <div>
+    <span>
+      <div class="container">
+        <div class="row justify-content-md-left">
+          <div>
+            <!-- class="col col-lg-6" -->
+
+            <form style="border-style: solid;">
+              <div style="background-color:rgb(247, 241, 237 );">
+                <div align="center">
+                  <h3 style="background: rgb(236, 239, 255  );">Factura</h3>
+                </div>
+                <label style="margin-left: 30%">Tipo</label>
+                <select [(ngModel)]="factura.tipo" name="facturaTipo" style="width:8%">
+                  <option>A</option>
+                  <option>B</option>
+                  <option>C</option>
+                </select>
+                <label style="margin-left: 20%">Nro</label>
+
+                <input type="text" style="width:5%">
+                <input [(ngModel)]="factura.numero" name="numeroFactura" type="Text" style="width:25%"> <br>
+                <label style="margin-left: 5%">Cliente</label>
+
+                <select (change)="onChange()" style="width:35%" [(ngModel)]="factura.clienteId" name="nombrecliente">
+                  <option *ngFor="let cliente of _cliFactRepoService.listadoClientes" [value]="cliente.id">
+                    {{ cliente.nombre }}</option>
+                </select>
+
+                <label style="margin-left: 5%">Fecha</label>
+                <input [(ngModel)]="factura.fecha" name="fechaFactura" type="text" style="width:30%">
+                <br>
+
+                <label style="margin-left: 5%">Nombre</label>
+                <label style="margin-left: 30%">CUIT</label> <br>
+                <input readonly type="Text" style="margin-left: 5%" style="width:35%" [(ngModel)]="cliente.nombre"
+                  name="clientenombre">
+                <input [(ngModel)]="cliente.cuit" name="cuitcliente" readonly type="Text" style="margin-left: 8%"
+                  style="width:35%" [(ngModel)]="cliente.cuit" name="clientecuit"> <br>
+                <label style="margin-left: 5%">Dirección</label> <br>
+                <label style="margin-left: 4%"></label>
+                <input [(ngModel)]="cliente.direccion" name="direccioncliente" readonly type="Text" style="width:90%"
+                  [(ngModel)]="cliente.direccion" name="clientedireccion"> <br> <br>
+                <label for="">Cant</label>
+                <input [(ngModel)]="cant" name="cant" type="number" style="width:10%">
+                <label for="">Producto</label>
+
+                <select (change)="onChange2()" name="prod" style="width:35%" [(ngModel)]="producto.id"
+                  name="productoid">
+                  <option *ngFor="let producto of _productoRepoService.listadoProductos" [value]="producto.id">
+                    {{ producto.codigo }}</option>
+                </select>
+
+                <label for="">IVA</label>
+
+                <select [(ngModel)]="iva" name="iva" style="width:10%">
+                  <option value="21">21</option>
+                  <option value="10.5">10.5</option>
+                  <option value="0">0</option>
+                </select>
+
+                <button (click)="agregarItem()" id="btnAgrItem" name="btnAgrItem">Agregar</button>
+                <table class="table" id="tablaItems">
+                  <thead class="thead-dark">
+                    <tr>
+                      <th scope="col">Cant</th>
+                      <th scope="col">Codigo</th>
+                      <th scope="col">Descripción</th>
+                      <th scope="col">PU</th>
+                      <th scope="col">IVA</th>
+                      <th scope="col">S Total</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let itemz of listaItems; let i = index" [attr.id]="itemz.id">
+                      <td>{{itemz.cantidad}}</td>
+
+                      <td>{{itemz.codigo}}</td>
+                      <td>{{itemz.descripcion}}</td>
+                      <td>{{itemz.precioU}}</td>
+                      <td>{{itemz.iva}}</td>
+                      <td>{{itemz.subtotal}}</td>
+                      <button id="x" name="x" (click)="deleteRow(itemz)">X</button>
+                    </tr>
+
+                  </tbody>
+                </table>
+                <br>
+
+                <label style="margin-left: 65%">Total $</label>
+                <input [(ngModel)]="total" readonly name="total" type="Text" style="width:25%">
+                <button style="margin-left: 85%" (click)=guardarFactura() id="btnEnviar"
+                  name="btnEnviar">Agregar</button>
+
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </span>
+  </div>
+</body>

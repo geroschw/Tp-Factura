@@ -1,0 +1,9 @@
+<h3>Listado de Clientes</h3>
+<ul>
+    <li (click)="obtenerCliente(cliente.id)" *ngFor="let cliente of _CliRepoService.listadoClientes">
+        {{cliente.id}} - {{cliente.nombre}}-{{cliente.direccion}}-{{cliente.cuit}}
+        <button (click)="borrarCliente(cliente.id)">Borrar</button>
+        <button routerLink="/clientes/{{cliente.id}}">Editar</button>
+    </li>
+</ul>
+<button routerLink="/clientes/nuevo">Nuevo</button>

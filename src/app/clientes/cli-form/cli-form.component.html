@@ -1,0 +1,20 @@
+<h3>Cliente</h3>
+<form (ngSubmit)="grabarCliente()">
+    <label for="clienteId">Id</label><br>
+    <input type="number" name="clienteId"
+    [(ngModel)]=cliente.id> <br>
+
+    <label for="clienteNom">Nombre</label><br>
+    <input type="text" name="clienteNom"
+    [(ngModel)]=cliente.nombre> <br>
+
+    <label for="clienteDir">Direccion</label><br>
+    <input type="text" name="clienteDir"
+    [(ngModel)]=cliente.direccion> <br>
+
+    <label for="clienteCuit">Cuit</label><br>
+    <input type="text" name="clienteCuit"
+    [(ngModel)]=cliente.cuit> <br>
+
+    <button>Agregar</button> 
+</form>

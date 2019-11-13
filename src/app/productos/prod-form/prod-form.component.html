@@ -1,0 +1,21 @@
+<h3>Productos</h3>
+<form (ngSubmit)="grabarProducto()">
+    <label for="productoId">Id</label><br>
+    <input type="number" name="productoId"
+    [(ngModel)]=producto.id> <br>
+
+    <label for="productoCod">Codigo</label><br>
+    <input type="text" name="productoCod"
+    [(ngModel)]=producto.codigo> <br>
+
+    <label for="productoDesc">Descripcion</label><br>
+    <input type="text" name="productoDesc"
+    [(ngModel)]=producto.descripcion> <br>
+
+    <label for="productoPU">Precio Unitario</label><br>
+    <input type="number" name="productoPU"
+    [(ngModel)]=producto.precioU> <br>
+
+    <button >Agregar</button>
+</form>
+

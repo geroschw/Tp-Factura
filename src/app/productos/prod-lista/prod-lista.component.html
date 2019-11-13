@@ -1,0 +1,9 @@
+<h3>Listado de Productos</h3>
+<ul>
+    <li (click)="obtenerProducto(producto.id)" *ngFor="let producto of _ProdRepoService.listadoProductos">
+        {{producto.id}} - {{producto.codigo}}-{{producto.descripcion}}-{{producto.precioU}}
+        <button (click)="borrarProducto(producto.id)">Borrar</button>
+        <button routerLink="/productos/{{producto.id}}">Editar</button>
+    </li>
+</ul>
+<button routerLink="/productos/nuevo">Nuevo</button>

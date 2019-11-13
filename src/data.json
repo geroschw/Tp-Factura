@@ -1,0 +1,116 @@
+{
+  "facturas": [
+    {
+      "ArrayItems": [
+        {
+          "id": 0,
+          "cantidad": 1,
+          "codigo": "Flan Vain Riq",
+          "descripcion": "Flan de Vainilla marca Riquisima",
+          "precioU": 32.6,
+          "iva": 21,
+          "subtotal": 39.446,
+          "productoId": 2
+        },
+        {
+          "id": 0,
+          "cantidad": 1,
+          "codigo": "Flan Vain Riq",
+          "descripcion": "Flan de Vainilla marca Riquisima",
+          "precioU": 32.6,
+          "iva": "10.5",
+          "subtotal": 36.023,
+          "productoId": 2
+        },
+        {
+          "id": 0,
+          "cantidad": 1,
+          "codigo": "Esponj GV",
+          "descripcion": "Esponja para platos Great Value",
+          "precioU": 20.4,
+          "iva": "0",
+          "subtotal": 20.4,
+          "productoId": 1
+        }
+      ],
+      "id": 1,
+      "tipo": "B",
+      "fecha": "12-07-2019",
+      "numero": "3214323",
+      "ptoVenta": 0,
+      "clienteId": "1",
+      "total": 95.869
+    },
+    {
+      "ArrayItems": [
+        {
+          "id": 0,
+          "cantidad": 1,
+          "codigo": "Esponj GV",
+          "descripcion": "Esponja para platos Great Value",
+          "precioU": 20.4,
+          "iva": 21,
+          "subtotal": 24.684,
+          "productoId": 1
+        },
+        {
+          "id": 0,
+          "cantidad": 1,
+          "codigo": "Flan Vain Riq",
+          "descripcion": "Flan de Vainilla marca Riquisima",
+          "precioU": 32.6,
+          "iva": 21,
+          "subtotal": 39.446,
+          "productoId": 2
+        }
+      ],
+      "id": 2,
+      "tipo": "B",
+      "fecha": "13-01-2018",
+      "numero": "21314123",
+      "ptoVenta": 0,
+      "clienteId": "2",
+      "total": 64.13
+    }
+  ],
+  "productos": [
+    {
+      "id": 1,
+      "codigo": "Esponj GV",
+      "descripcion": "Esponja para platos Great Value",
+      "precioU": 20.4
+    },
+    {
+      "id": 2,
+      "codigo": "Flan Vain Riq",
+      "descripcion": "Flan de Vainilla marca Riquisima",
+      "precioU": 32.6
+    }
+  ],
+  "clientes": [
+    {
+      "id": 1,
+      "nombre": "Alicia",
+      "direccion": "Zanni 83",
+      "cuit": "1023543546"
+    },
+    {
+      "id": 2,
+      "nombre": "Patricio",
+      "direccion": "Almafuerte 234",
+      "cuit": "2712332548"
+    },
+    {
+      "id": 3,
+      "nombre": "Lucía",
+      "direccion": "Don Bosco 234",
+      "cuit": "281231435"
+    },
+    {
+      "id": 4,
+      "nombre": "Analía",
+      "direccion": "J Newbery 223",
+      "cuit": "3242343234"
+    }
+  ]
+}
